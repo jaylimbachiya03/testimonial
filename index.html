@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html>
+
+<head> 
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Tastimonial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2adf69fc9a.js" crossorigin="anonymous"></script>
+</head> 
+
+<body>
+    <div class="containier">
+        <div class="testimonial">
+            <div class="testimonial-text">
+
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                        into electronic typesetting, remaining essentially unchanged.</p>
+                        <span> Jhon Ryan, CEO Humble</span>   
+                </div> 
+                <div class="user-text active-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                        into electronic typesetting, remaining essentially unchanged. It was popularised in passages</p>
+                        <span> Jhon 2, CEO 2</span>   
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                         It has survived not only five centuries, but also the leap 
+                        into electronic typesetting, remaining essentially unchanged. It was popularised in passages</p>
+                        <span> Jhon 3, CEO 3</span>   
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                        It was popularised in passages</p>
+                        <span> Jhon 4, CEO 4</span>   
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                        into electronic typesetting, remaining essentially unchanged. It was popularised in passages</p>
+                        <span> Jhon 5, CEO 5</span>   
+                </div>
+            </div>
+
+            <div class="testimonial-pic">
+                <img src="images/user1.png" class="user-pic" onclick="showReview()">
+                <img src="images/user2.png" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/user3.png" class="user-pic" onclick="showReview()">
+                <img src="images/user4.png" class="user-pic" onclick="showReview()">
+                <img src="images/user5.png" class="user-pic" onclick="showReview()">
+            </div>
+
+             
+        </div>
+
+    </div>
+
+    <script> 
+            let usertexts = document.getElementsByName("user-text");
+            let userpics = document.getElementsByClassName("user-pic");
+
+            function showReview(){
+                for(userpic of userpics){
+                    userpic.classlist.remove("active-pic");
+                }
+                for(usertext of usertexts){
+                    usertext.classlist.remove("active-text");
+                }
+            let i = Array.from(userpics).indexOf(event.target);
+            userpics[i].classList.add("active-pic");
+            usertexts[i].classList.add("active-text");    
+
+
+
+            }
+    
+    
+    </script>
+
+</body>
+
+</html>
